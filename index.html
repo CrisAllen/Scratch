@@ -9,10 +9,10 @@
     <body>
         <script type="text/Javascript">
             var touched = false;
-            document.addEventListener('mousedown', function(e){
+            document.addEventListener('touchstart', function(e){
                 touched = true;
             })
-            document.addEventListener('mousemove', function(e){
+            document.addEventListener('touchmove', function(e){
                 if (touched = true){
                     const body = document.querySelector('body');
                     const bubbles = document.createElement('span');
@@ -21,7 +21,7 @@
                     body.appendChild(bubbles);
                 }
             })
-            document.addEventListener('mouseup', function(e){
+            document.addEventListener('touchend', function(e){
                 touched = false;
             })
         </script>
