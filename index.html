@@ -61,6 +61,7 @@
 
                 for (let i = 0; i < touches.length; i++) {
                     // log(`touchstart: ${i}.`);
+                    console.log(touches[i])
                     ongoingTouches.push(copyTouch(touches[i]));
                     const color = colorForTouch(touches[i]);
                     // log(`color of touch with id ${ touches[i].identifier } = ${ color }`);
