@@ -7,13 +7,22 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+
+        <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
+            Your browser does not support canvas element.
+          </canvas>
+          <br>
+
+
         <script type="text/Javascript">
             var touched = false;
             document.addEventListener('touchstart', function(e){
                 touched = true;
             })
-            document.addEventListener('touchmove', function(e){
-                if (touched = true){
+            document.addEventListener('touchmove', function(e)
+            {
+                e.preventDefault();
+                 if (touched = true){
                     const body = document.querySelector('body');
                     const bubbles = document.createElement('span');
                     bubbles.style.left = -75 + e.offsetX+'px';
@@ -24,6 +33,46 @@
             document.addEventListener('touchend', function(e){
                 touched = false;
             })
+
+            // new 
+
+            function startup() {
+                const el = document.getElementById('canvas');
+                el.addEventListener('touchstart', handleStart);
+                el.addEventListener('touchend', handleEnd);
+                el.addEventListener('touchcancel', handleCancel);
+                el.addEventListener('touchmove', handleMove);
+                log('Initialized.');
+            }
+
+            document.addEventListener("DOMContentLoaded", startup);
+
+            // handle start
+
+            function handleStart(evt) {
+                evt.preventDefault();
+                log('touchstart.');
+                const el = document.getElementById('canvas');
+                const ctx = el.getContext('2d');
+                const touches = evt.changedTouches;
+                //added
+                const bubbles = document.createElement('span')
+
+
+                for (let i = 0; i < touches.length; i++) {
+                    log(`touchstart: ${i}.`);
+                    ongoingTouches.push(copyTouch(touches[i]));
+                    const color = colorForTouch(touches[i]);
+                    log(`color of touch with id ${ touches[i].identifier } = ${ color }`);
+                    // ctx.beginPath();
+                    // ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+                    // ctx.fillStyle = color;
+                    // ctx.fill();
+                    bubbles.style.left = -75 + evt.offsetX+'px';
+                    bubbles.style.top = -75 + evt.offsetY+'px';
+                    el.appendChild(bubbles);
+                }
+            }
         </script>
     </body>
 </html>
