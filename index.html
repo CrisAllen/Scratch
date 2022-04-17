@@ -68,8 +68,8 @@
                     // ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
                     // ctx.fillStyle = color;
                     // ctx.fill();
-                    bubbles.style.left = -75 + evt.offsetX+'px';
-                    bubbles.style.top = -75 + evt.offsetY+'px';
+                    bubbles.style.left = -75 + touches[i].pageX+'px';
+                    bubbles.style.top = -75 + touches[i].pageY+'px';
                     el.appendChild(bubbles);
                 }
             }
