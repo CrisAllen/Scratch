@@ -8,31 +8,31 @@
     </head>
     <body>
 
-        <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
+        <canvas id="canvas" width="600" height="300" style="border:solid black 1px;">
             Your browser does not support canvas element.
           </canvas>
           <br>
 
 
         <script type="text/Javascript">
-            var touched = false;
-            document.addEventListener('touchstart', function(e){
-                touched = true;
-            })
-            document.addEventListener('touchmove', function(e)
-            {
-                e.preventDefault();
-                 if (touched = true){
-                    const body = document.querySelector('body');
-                    const bubbles = document.createElement('span');
-                    bubbles.style.left = -75 + e.offsetX+'px';
-                    bubbles.style.top = -75 + e.offsetY+'px';
-                    body.appendChild(bubbles);
-                }
-            })
-            document.addEventListener('touchend', function(e){
-                touched = false;
-            })
+            // var touched = false;
+            // document.addEventListener('touchstart', function(e){
+            //     touched = true;
+            // })
+            // document.addEventListener('touchmove', function(e)
+            // {
+            //     e.preventDefault();
+            //      if (touched = true){
+            //         const body = document.querySelector('body');
+            //         const bubbles = document.createElement('span');
+            //         bubbles.style.left = -75 + e.offsetX+'px';
+            //         bubbles.style.top = -75 + e.offsetY+'px';
+            //         body.appendChild(bubbles);
+            //     }
+            // })
+            // document.addEventListener('touchend', function(e){
+            //     touched = false;
+            // })
 
             // new 
 
