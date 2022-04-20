@@ -3,15 +3,16 @@
     margin: 0;
     padding: 0;
 }
-body
+#canvas
 {
-    width: 100%;
-    height: 100vh;
-    background: repeating-linear-gradient(0deg, #fff 0%, #fff 50%, #000 100%), 
+    /* width: 100%;
+    height: 100vh; */
+    /* background: repeating-linear-gradient(0deg, #fff 0%, #fff 50%, #000 100%), 
         repeating-linear-gradient(90deg, #fff 0%, #fff 50%, #000 100%);
     background-size: 30px 30px; 
     background-blend-mode: difference;
-    overflow: hidden;
+    overflow: hidden; */
+    text-align: center;
 }
 span{
     display: block;
