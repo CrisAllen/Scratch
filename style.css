@@ -3,6 +3,13 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+
+    background-image: url(who.jpg);
+    background-repeat: no-repeat;
+}
+
 #canvas
 {
     /* width: 100%;
@@ -25,4 +32,11 @@ span{
     pointer-events: none;
     border-radius: 50%;
     /* pointer-mouse-move:; */
+}
+
+#content
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
