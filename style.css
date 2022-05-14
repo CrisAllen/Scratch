@@ -24,6 +24,7 @@ body{
     background-blend-mode: difference;
     overflow: hidden; */
     text-align: center;
+    border-style: none;
 }
 span{
     display: block;
@@ -34,6 +35,8 @@ span{
     background-attachment: fixed;
     pointer-events: none;
     border-radius: 50%;
+    border-style: none;
+    border-color:white;
     /* pointer-mouse-move:; */
 }
 
@@ -47,6 +50,19 @@ span{
     font-size: large;
 }
 
+#reveal
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color:white;
+    font-size: 140px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #parents
 {
     display: block;
@@ -56,8 +72,8 @@ span{
     padding-top: 50px;
     padding-bottom: 20px;
     color: white;
-    font-size: 120px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-size: 110px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 
 }
